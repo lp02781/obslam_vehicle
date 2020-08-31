@@ -35,7 +35,7 @@ ROS Installation
 - $ sudo apt install python-rosdep
 - $ sudo rosdep init
 - $ rosdep update
-reff http://wiki.ros.org/melodic/Installation/Ubuntu
+- reff http://wiki.ros.org/melodic/Installation/Ubuntu
 
 OpenCV 3.4 Installation
 - $ sudo apt-get install build-essential
@@ -49,38 +49,41 @@ OpenCV 3.4 Installation
 - $ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
 - $ make -j7
 - $ sudo make install
-reff https://docs.opencv.org/3.4/d7/d9f/tutorial_linux_install.html
+- reff https://docs.opencv.org/3.4/d7/d9f/tutorial_linux_install.html
 
 Mavros Installation
-$ sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
-$ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
-$ sudo chmod +x ./install_geographiclib_datasets.sh
-$ sudo ./install_geographiclib_datasets.sh
+- $ sudo apt-get install ros-kinetic-mavros ros-kinetic-mavros-extras
+- $ wget https://raw.githubusercontent.com/mavlink/mavros/master/mavros/scripts/install_geographiclib_datasets.sh
+- $ sudo chmod +x ./install_geographiclib_datasets.sh
+- $ sudo ./install_geographiclib_datasets.sh
 
 Qt Installation 
-$ sudo apt-get install qt4-default  #untuk package hector map
-$ sudo apt-get install qt5-default
+- $ sudo apt-get install qt4-default  #untuk package hector map
+- $ sudo apt-get install qt5-default
 
-Workspace Installation
-pilih salah satu
-$ git clone https://github.com/lp02781/obslam_vehicle.git #gw private, kontak gw
-$ git clone https://gitlab.com/muisdong/puti20_fikih.git #minta collab ke pak Muis
+Workspace Installation (pilih salah satu)
+- $ git clone https://github.com/lp02781/obslam_vehicle.git #gw private, kontak gw
+- $ git clone https://gitlab.com/muisdong/puti20_fikih.git #minta collab ke pak Muis
+
 klo gk salah ada package yg kosong namanya rplidar_ros, jadi download ulang
-$ cd <nama_workspace>/src/
-$ rm -rf rplidar_ros
-$ git clone https://github.com/robopeak/rplidar_ros.git
-$ cd ..
-$ rm -rf build
-$ catkin_make #kalo ada error nya, cari di internet cara perbaikinnya
-karena videonya gk bisa dimasukkin ke git, jadi download ulang videonya di link berikut
-ekstrat dan simpan kedua video tersebut di: 
- <nama_workspace>/gui
+- $ cd <nama_workspace>/src/
+- $ rm -rf rplidar_ros
+- $ git clone https://github.com/robopeak/rplidar_ros.git
+- $ cd ..
+- $ rm -rf build
+- $ catkin_make #kalo ada error nya, cari di internet cara perbaikinnya
 
-$ geany ~/.bashrc
+karena videonya gk bisa dimasukkin ke git, jadi download ulang videonya di link berikut. 
+- https://drive.google.com/file/d/1n-BhqamK_TNGYMfnFvDTSwWtsAdEFdQ9/view?usp=sharing
+
+ekstrat dan simpan kedua video tersebut di: 
+- <nama_workspace>/gui
+
+- $ geany ~/.bashrc
 dibaris paling bawah tulis 
-	source <alamat workspace>
-	contoh
-	source ~/obslam_vehicle/devel/setup.bash
+	- source <alamat workspace>
+	- contoh
+	- source ~/obslam_vehicle/devel/setup.bash
 restart terminal
 
 gw pake nama workspacenya obslam_vehicle biar keren
