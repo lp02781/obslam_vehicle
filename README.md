@@ -80,52 +80,58 @@ ekstrat dan simpan kedua video tersebut di:
 - <nama_workspace>/gui
 
 - $ geany ~/.bashrc
+
 dibaris paling bawah tulis 
-	- source <alamat workspace>
-	- contoh
-	- source ~/obslam_vehicle/devel/setup.bash
+- source ~/obslam_vehicle/devel/setup.bash
+
 restart terminal
 
 gw pake nama workspacenya obslam_vehicle biar keren
 
 Menggunakan Kamera
-$ cd obslam_vehicle/documents
-$ ./build.sh
-$ ./allcolour
+- $ cd obslam_vehicle/documents
+- $ ./build.sh
+- $ ./allcolour
+
 untuk mengubah kamera yang digunakan, ubah parameter baris 41
+	
 	VideoCapture cap(0); 0 untuk webcam laptop, 2 untuk IR, 4 untuk RGB, coba2 aja ubah angkanya
 
 Menggunakan Pixhawk dan GPS
-$ sudo chmod 666 /dev/ttyACM0
-$ roslaunch mavros apm.launch
-$ rostopic echo /mavros/global_position/global #klo gk salah ini nama topicnya
+- $ sudo chmod 666 /dev/ttyACM0
+- $ roslaunch mavros apm.launch
+- $ rostopic echo /mavros/global_position/global #klo gk salah ini nama topicnya
+
 klo salah topicnya buka aja
-$ rostopic list
+- $ rostopic list
 
 Menggunakan RpLidar S1
-$ roslaunch rplidar_ros view_rplidar_s1.launch #raw map
+- $ roslaunch rplidar_ros view_rplidar_s1.launch #raw map
+
 restart terminal
+- $ roslaunch rplidar_ros rplidar_ros rplidar_s1.launch
+- $ roslaunch hector_slam tutorial.launch #hector map
 
-$ roslaunch rplidar_ros rplidar_ros rplidar_s1.launch
-$ roslaunch hector_slam tutorial.launch #hector map
-
-reff https://github.com/Slamtec/rplidar_ros
-reff https://github.com/tu-darmstadt-ros-pkg/hector_slam
+- reff https://github.com/Slamtec/rplidar_ros
+- reff https://github.com/tu-darmstadt-ros-pkg/hector_slam
 
 Menggunakan Full system pake log data 
-$ cd <nama_workspace>/documents/mobil
-$ ./server
+- $ cd <nama_workspace>/documents/mobil
+- $ ./server
+
 buka QtCreator, buka <nama_workspace>/gui/ver_5/ver_3.pro, klik tombol running di kiri bawah
 
 Menggunakan multi-sensor real time 
-$ cd <nama_workspace>
-$ source devel/setup.bash
-$ roslaunch haha indoor.launch
+- $ cd <nama_workspace>
+- $ source devel/setup.bash
+- $ roslaunch haha indoor.launch 
+
 atau
-$ roslaunch haha outdoor.launch
+- $ roslaunch haha outdoor.launch
 
 menggunakan Full system real time
-$ cd <nama_workspace>
-$ source devel/setup.bash
-$roslaunch hehe complete.launch
+- $ cd <nama_workspace>
+- $ source devel/setup.bash
+- $ roslaunch hehe complete.launch
+
 buka QtCreator, buka <nama_workspace>/gui/ver_6/ver_3.pro, klik tombol running di kiri bawah
