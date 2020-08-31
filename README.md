@@ -73,7 +73,7 @@ $ cd ..
 $ rm -rf build
 $ catkin_make #kalo ada error nya, cari di internet cara perbaikinnya
 karena videonya gk bisa dimasukkin ke git, jadi download ulang videonya di link berikut
-simpan kedua video tersebut di: 
+ekstrat dan simpan kedua video tersebut di: 
  <nama_workspace>/gui
 
 $ geany ~/.bashrc
@@ -108,3 +108,21 @@ $ roslaunch hector_slam tutorial.launch #hector map
 
 reff https://github.com/Slamtec/rplidar_ros
 reff https://github.com/tu-darmstadt-ros-pkg/hector_slam
+
+Menggunakan Full system pake log data 
+$ cd <nama_workspace>/documents/mobil
+$ ./server
+buka QtCreator, buka <nama_workspace>/gui/ver_5/ver_3.pro, klik tombol running di kiri bawah
+
+Menggunakan multi-sensor real time 
+$ cd <nama_workspace>
+$ source devel/setup.bash
+$ roslaunch haha indoor.launch
+atau
+$ roslaunch haha outdoor.launch
+
+menggunakan Full system real time
+$ cd <nama_workspace>
+$ source devel/setup.bash
+$roslaunch hehe complete.launch
+buka QtCreator, buka <nama_workspace>/gui/ver_6/ver_3.pro, klik tombol running di kiri bawah
