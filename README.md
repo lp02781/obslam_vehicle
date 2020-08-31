@@ -38,17 +38,17 @@ ROS Installation
 reff http://wiki.ros.org/melodic/Installation/Ubuntu
 
 OpenCV 3.4 Installation
-$ sudo apt-get install build-essential
-$ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
-$ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
-$ git clone https://github.com/opencv/opencv.git
-$ git clone https://github.com/opencv/opencv_contrib.git
-$ cd ~/opencv
-$ mkdir build
-$ cd build
-$ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
-$ make -j7
-$ sudo make install
+- $ sudo apt-get install build-essential
+- $ sudo apt-get install cmake git libgtk2.0-dev pkg-config libavcodec-dev libavformat-dev libswscale-dev
+- $ sudo apt-get install python-dev python-numpy libtbb2 libtbb-dev libjpeg-dev libpng-dev libtiff-dev libjasper-dev libdc1394-22-dev
+- $ git clone https://github.com/opencv/opencv.git
+- $ git clone https://github.com/opencv/opencv_contrib.git
+- $ cd ~/opencv
+- $ mkdir build
+- $ cd build
+- $ cmake -D CMAKE_BUILD_TYPE=Release -D CMAKE_INSTALL_PREFIX=/usr/local ..
+- $ make -j7
+- $ sudo make install
 reff https://docs.opencv.org/3.4/d7/d9f/tutorial_linux_install.html
 
 Mavros Installation
