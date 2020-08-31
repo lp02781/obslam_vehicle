@@ -1,0 +1,14 @@
+]http://wiki.ros.org/rplidar
+https://www.seeedstudio.com/blog/2018/11/09/rplidar-and-ros-the-best-way-to-learn-robot-and-slam/
+http://ardupilot.org/dev/docs/ros-slam.html
+http://docs.erlerobotics.com/simulation/vehicles/erle_rover/tutorial_4
+https://github.com/PX4/Firmware
+https://dev.px4.io/v1.9.0/en/simulation/gazebo.html
+https://github.com/mavlink/mavros
+https://github.com/lp02781/RPLidar_Hector_SLAM
+http://wiki.ros.org/hector_mapping
+https://ros-qtc-plugin.readthedocs.io/en/latest/_source/Performance-Analysis.html
+http://wiki.ros.org/rqt
+https://github.com/Levi-Armstrong/ros_qtc_plugins/wiki/Setup-Qt-Creator-for-ROS#section1.4
+https://www.cnblogs.com/casperwin/p/6206193.html
+https://ros-qtc-plugin.readthedocs.io/en/latest/_source/Performance-Analysis.html#qtcreator-setup

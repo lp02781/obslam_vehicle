@@ -1,0 +1,8 @@
+prefix=/home/mfikih15/obslam_vehicle/devel
+
+Name: hehe
+Description: Description of hehe
+Version: 0.0.0
+Cflags: -I/home/mfikih15/obslam_vehicle/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime

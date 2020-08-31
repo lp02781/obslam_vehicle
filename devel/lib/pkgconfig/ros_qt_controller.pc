@@ -1,0 +1,8 @@
+prefix=/home/mfikih15/obslam_vehicle/devel
+
+Name: ros_qt_controller
+Description: Description of ros_qt_controller
+Version: 0.0.1
+Cflags: 
+Libs: -L/home/mfikih15/obslam_vehicle/devel/lib 
+Requires: roscpp geometry_msgs

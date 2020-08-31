@@ -1,0 +1,5 @@
+<!DOCTYPE RCC><RCC version="1.0">
+<qresource prefix="/">
+<file alias="dashboard.qml">/home/mfikih15/obslam_vehicle/gui/ui_molina/mockup/dashboard.qml</file>
+</qresource>
+</RCC>

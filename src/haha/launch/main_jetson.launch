@@ -1,0 +1,13 @@
+<launch>	
+	<node name="camera_record" pkg="haha" output="screen" type="camera_record"/>
+	<node name="pixhawk_record" pkg="haha" output="screen" type="pixhawk_record"/>
+	<node name="lidar_record" pkg="haha" output="screen" type="lidar_record"/>
+	
+	<node name="camera_pub" pkg="haha" output="screen" type="camera_pub"/>
+	<node name="pixhawk_pub" pkg="haha" output="screen" type="pixhawk_pub"/>
+	<node name="lidar_pub" pkg="haha" output="screen" type="lidar_pub"/>
+	
+	<include file="$(find rplidar_ros)/launch/rplidar_s1.launch" />
+	<!-- node name="rviz" pkg="rviz" type="rviz" args="-d $(find rplidar_ros)/rviz/rplidar.rviz" -->
+	
+</launch>

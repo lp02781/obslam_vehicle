@@ -1,0 +1,23 @@
+int16 number
+int16 throttle
+int16 rpm
+int16 speed
+float32 engine_load
+int16 temperature
+int16 humidity
+string engine_status
+string battery_status
+int16 battery_cap
+int16 air_pressure
+int16 air_temperature
+int16 torque
+int16 load
+int16 efficiency
+int16 voltage
+int16 current
+int16 discharge
+int16 hours
+int16 minutes
+int16 second
+string health
+

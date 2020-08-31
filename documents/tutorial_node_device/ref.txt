@@ -1,0 +1,3 @@
+https://unix.stackexchange.com/questions/241173/how-are-dev-linux-files-created
+https://unix.stackexchange.com/questions/269648/what-are-exactly-mknod-command-parameters
+https://blog.mbedded.ninja/programming/operating-systems/linux/linux-serial-ports-using-c-cpp/

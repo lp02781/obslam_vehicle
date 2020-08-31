@@ -1,0 +1,8 @@
+prefix=/home/mfikih15/obslam_vehicle/devel
+
+Name: rqt_robot_dashboard
+Description: Description of rqt_robot_dashboard
+Version: 0.5.7
+Cflags: 
+Libs: -L/home/mfikih15/obslam_vehicle/devel/lib 
+Requires: 

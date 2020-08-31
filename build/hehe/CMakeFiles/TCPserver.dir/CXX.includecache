@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mfikih15/obslam_vehicle/src/hehe/src/TCPserver.cpp
+unistd.h
+-
+iostream
+-
+sys/socket.h
+-
+stdlib.h
+-
+netinet/in.h
+-
+string
+-
+cstring
+-
+fstream
+-
+sstream
+-
+stdio.h
+-
+arpa/inet.h
+-
+unistd.h
+-
+cstdlib
+-
+

@@ -1,0 +1,50 @@
+<launch>
+	<node name="image_front" pkg="haha" output="screen" type="image_front"/>
+	<node name="image_infrared" pkg="haha" output="screen" type="image_infrared"/>
+	<node name="display_sensor" pkg="haha" output="screen" type="display_sensor"/>
+	<node name="pub_external" pkg="haha" output="screen" type="pub_external"/>
+	
+	<node name="rplidarNode"          pkg="rplidar_ros"  type="rplidarNode" output="screen">
+		<param name="serial_port"         type="string" value="/dev/ttyUSB0"/>  
+		<param name="serial_baudrate"     type="int"    value="256000"/>
+		<param name="frame_id"            type="string" value="laser"/>
+		<param name="inverted"            type="bool"   value="false"/>
+		<param name="angle_compensate"    type="bool"   value="true"/>
+	</node>
+	
+	<node name="rplidarNodeClient" pkg="rplidar_ros"  type="rplidarNodeClient" output="screen"/>
+	
+	<arg name="geotiff_map_file_path" default="$(find hector_geotiff)/maps"/>
+	<param name="/use_sim_time" value="false"/>
+	<node pkg="rviz" type="rviz" name="rviz"
+    args="-d $(find hector_slam_launch)/rviz_cfg/mapping_demo.rviz"/>
+	<include file="$(find hector_mapping)/launch/mapping_default.launch"/>
+	<include file="$(find hector_geotiff)/launch/geotiff_mapper.launch">
+		<arg name="trajectory_source_frame_name" value="scanmatcher_frame"/>
+		<arg name="map_file_path" value="$(arg geotiff_map_file_path)"/>
+	</include>
+	
+	<!-- vim: set ft=xml noet : -->
+	<!-- example launch script for ArduPilot based FCU's -->
+
+	<arg name="fcu_url" default="/dev/ttyACM0:57600" />
+	<arg name="gcs_url" default="" />
+	<arg name="tgt_system" default="1" />
+	<arg name="tgt_component" default="1" />
+	<arg name="log_output" default="screen" />
+	<arg name="fcu_protocol" default="v2.0" />
+	<arg name="respawn_mavros" default="false" />
+
+	<include file="$(find mavros)/launch/node.launch">
+		<arg name="pluginlists_yaml" value="$(find mavros)/launch/apm_pluginlists.yaml" />
+		<arg name="config_yaml" value="$(find mavros)/launch/apm_config.yaml" />
+
+		<arg name="fcu_url" value="$(arg fcu_url)" />
+		<arg name="gcs_url" value="$(arg gcs_url)" />
+		<arg name="tgt_system" value="$(arg tgt_system)" />
+		<arg name="tgt_component" value="$(arg tgt_component)" />
+		<arg name="log_output" value="$(arg log_output)" />
+		<arg name="fcu_protocol" value="$(arg fcu_protocol)" />
+		<arg name="respawn_mavros" default="$(arg respawn_mavros)" />
+	</include>	
+</launch>

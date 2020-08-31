@@ -1,0 +1,4 @@
+<launch>
+	<node name="camera_dummy" pkg="haha" output="screen" type="camera_dummy"/>
+	<node name="dummy" pkg="haha" output="screen" type="dummy"/>
+</launch>

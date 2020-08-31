@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>0</y>
+      <width>801</width>
+      <height>691</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../fix_3.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="main_window">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>221</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Main Dashboard</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="lidar_window">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>165</y>
+      <width>221</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Lidar and Camera</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="map_window">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>330</y>
+      <width>221</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Map and GPS</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="battery_window">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>500</y>
+      <width>221</width>
+      <height>167</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Battery and Engine</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

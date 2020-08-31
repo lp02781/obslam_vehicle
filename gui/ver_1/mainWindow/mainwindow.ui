@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>728</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>6</y>
+      <width>1011</width>
+      <height>671</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../fix.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>70</y>
+      <width>371</width>
+      <height>191</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Bitstream Charter</family>
+      <pointsize>200</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">ui-&gt;speed-&gt;setStyleSheet(&quot;color: white;&quot;);
+</string>
+    </property>
+    <property name="text">
+     <string>42</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_1">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>280</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../hijau.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_2">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>250</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../hijau muda.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_3">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>220</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../kuning.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_4">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>190</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../kuning muda.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_5">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>160</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../orange.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_6">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>130</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../orange muda.png</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_7">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>100</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../merahmuda.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="speed_8">
+    <property name="geometry">
+     <rect>
+      <x>840</x>
+      <y>70</y>
+      <width>131</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../merah.jpg</pixmap>
+    </property>
+   </widget>
+   <widget class="QLabel" name="latitude">
+    <property name="geometry">
+     <rect>
+      <x>630</x>
+      <y>470</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>-6.361150100</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="longitude">
+    <property name="geometry">
+     <rect>
+      <x>670</x>
+      <y>540</y>
+      <width>261</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>30</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>106.823587800</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="compass">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>500</y>
+      <width>131</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>37.86</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="day">
+    <property name="geometry">
+     <rect>
+      <x>70</x>
+      <y>90</y>
+      <width>91</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Sunday</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="date">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>90</y>
+      <width>141</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>23-06-2020</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="clock">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>150</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>40</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>20:28:30</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="status">
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>220</y>
+      <width>211</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>35</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Status OK</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

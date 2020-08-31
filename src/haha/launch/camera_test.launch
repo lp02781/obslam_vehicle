@@ -1,0 +1,5 @@
+<launch>
+	<node name="image_front" pkg="haha" output="screen" type="image_front"/>
+	<node name="image_infrared" pkg="haha" output="screen" type="image_infrared"/>
+	<node name="camera_display" pkg="haha" output="screen" type="camera_display"/>
+</launch>
