@@ -151,3 +151,9 @@ menggunakan Full system real time
 	$ roslaunch hehe complete.launch
 
 buka QtCreator, buka <nama_workspace>/gui/ver_6/ver_3.pro, klik tombol running di kiri bawah
+
+untuk melihat node apa saja yang bekerja, jalankan
+
+	$ rqt_graph
+
+Untuk edit Project silahkan liat di dokument teknis -> <Workspace>/documents/Technical_Document.docx
