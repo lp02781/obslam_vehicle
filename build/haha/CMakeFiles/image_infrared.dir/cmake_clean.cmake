@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o"
+  "CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o"
   "/home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared.pdb"
   "/home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared"
 )

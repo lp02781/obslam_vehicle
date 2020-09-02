@@ -57,38 +57,38 @@ include haha/CMakeFiles/image_front.dir/progress.make
 # Include the compile flags for this target's objects.
 include haha/CMakeFiles/image_front.dir/flags.make
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o: haha/CMakeFiles/image_front.dir/flags.make
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o: /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_front.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfikih15/obslam_vehicle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o -c /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_front.cpp
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.o: haha/CMakeFiles/image_front.dir/flags.make
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.o: /home/mfikih15/obslam_vehicle/src/haha/src/image_front.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfikih15/obslam_vehicle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object haha/CMakeFiles/image_front.dir/src/image_front.cpp.o"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_front.dir/src/image_front.cpp.o -c /home/mfikih15/obslam_vehicle/src/haha/src/image_front.cpp
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.i"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_front.cpp > CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.i
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/image_front.dir/src/image_front.cpp.i"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfikih15/obslam_vehicle/src/haha/src/image_front.cpp > CMakeFiles/image_front.dir/src/image_front.cpp.i
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.s"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_front.cpp -o CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.s
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/image_front.dir/src/image_front.cpp.s"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfikih15/obslam_vehicle/src/haha/src/image_front.cpp -o CMakeFiles/image_front.dir/src/image_front.cpp.s
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.requires:
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.requires:
 
-.PHONY : haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.requires
+.PHONY : haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.requires
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.provides: haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.requires
-	$(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.provides.build
-.PHONY : haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.provides
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.provides: haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.requires
+	$(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.provides.build
+.PHONY : haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.provides
 
-haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.provides.build: haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o
+haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.provides.build: haha/CMakeFiles/image_front.dir/src/image_front.cpp.o
 
 
 # Object files for target image_front
 image_front_OBJECTS = \
-"CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o"
+"CMakeFiles/image_front.dir/src/image_front.cpp.o"
 
 # External object files for target image_front
 image_front_EXTERNAL_OBJECTS =
 
-/home/mfikih15/obslam_vehicle/devel/lib/haha/image_front: haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o
+/home/mfikih15/obslam_vehicle/devel/lib/haha/image_front: haha/CMakeFiles/image_front.dir/src/image_front.cpp.o
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_front: haha/CMakeFiles/image_front.dir/build.make
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_front: /opt/ros/melodic/lib/libcv_bridge.so
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_front: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
@@ -174,7 +174,7 @@ haha/CMakeFiles/image_front.dir/build: /home/mfikih15/obslam_vehicle/devel/lib/h
 
 .PHONY : haha/CMakeFiles/image_front.dir/build
 
-haha/CMakeFiles/image_front.dir/requires: haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o.requires
+haha/CMakeFiles/image_front.dir/requires: haha/CMakeFiles/image_front.dir/src/image_front.cpp.o.requires
 
 .PHONY : haha/CMakeFiles/image_front.dir/requires
 

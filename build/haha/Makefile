@@ -56,40 +56,6 @@ CMAKE_BINARY_DIR = /home/mfikih15/obslam_vehicle/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-
-.PHONY : list_install_components/fast
-
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
@@ -101,16 +67,17 @@ rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target test
-test:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
-	/usr/bin/ctest --force-new-ctest-process $(ARGS)
-.PHONY : test
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
 
-# Special rule for the target test
-test/fast: test
-
-.PHONY : test/fast
+# Special rule for the target install/local
+install/local/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local/fast
 
 # Special rule for the target install/strip
 install/strip: preinstall
@@ -134,6 +101,39 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+
+.PHONY : test/fast
+
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
+
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -273,21 +273,6 @@ geographic_msgs_generate_messages_lisp/fast:
 .PHONY : geographic_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
-haha/CMakeFiles/camera_record.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/camera_record.dir/rule
-.PHONY : haha/CMakeFiles/camera_record.dir/rule
-
-# Convenience name for target.
-camera_record: haha/CMakeFiles/camera_record.dir/rule
-
-.PHONY : camera_record
-
-# fast build rule for target.
-camera_record/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_record.dir/build.make haha/CMakeFiles/camera_record.dir/build
-.PHONY : camera_record/fast
-
-# Convenience name for target.
 haha/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule:
 	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
 .PHONY : haha/CMakeFiles/geographic_msgs_generate_messages_eus.dir/rule
@@ -331,6 +316,21 @@ uuid_msgs_generate_messages_eus: haha/CMakeFiles/uuid_msgs_generate_messages_eus
 uuid_msgs_generate_messages_eus/fast:
 	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
 .PHONY : uuid_msgs_generate_messages_eus/fast
+
+# Convenience name for target.
+haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+.PHONY : haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+mavros_msgs_generate_messages_eus: haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+
+.PHONY : mavros_msgs_generate_messages_eus
+
+# fast build rule for target.
+mavros_msgs_generate_messages_eus/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+.PHONY : mavros_msgs_generate_messages_eus/fast
 
 # Convenience name for target.
 haha/CMakeFiles/mavros_msgs_generate_messages_cpp.dir/rule:
@@ -378,36 +378,6 @@ geographic_msgs_generate_messages_cpp/fast:
 .PHONY : geographic_msgs_generate_messages_cpp/fast
 
 # Convenience name for target.
-haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
-.PHONY : haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geographic_msgs_generate_messages_nodejs: haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geographic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geographic_msgs_generate_messages_nodejs/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
-.PHONY : geographic_msgs_generate_messages_nodejs/fast
-
-# Convenience name for target.
-haha/CMakeFiles/pixhawk_record.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/pixhawk_record.dir/rule
-.PHONY : haha/CMakeFiles/pixhawk_record.dir/rule
-
-# Convenience name for target.
-pixhawk_record: haha/CMakeFiles/pixhawk_record.dir/rule
-
-.PHONY : pixhawk_record
-
-# fast build rule for target.
-pixhawk_record/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_record.dir/build.make haha/CMakeFiles/pixhawk_record.dir/build
-.PHONY : pixhawk_record/fast
-
-# Convenience name for target.
 haha/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule:
 	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
 .PHONY : haha/CMakeFiles/mavros_msgs_generate_messages_py.dir/rule
@@ -423,19 +393,34 @@ mavros_msgs_generate_messages_py/fast:
 .PHONY : mavros_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-haha/CMakeFiles/haha_generate_messages_cpp.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
-.PHONY : haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
+haha/CMakeFiles/pub_external.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/pub_external.dir/rule
+.PHONY : haha/CMakeFiles/pub_external.dir/rule
 
 # Convenience name for target.
-haha_generate_messages_cpp: haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
+pub_external: haha/CMakeFiles/pub_external.dir/rule
 
-.PHONY : haha_generate_messages_cpp
+.PHONY : pub_external
 
 # fast build rule for target.
-haha_generate_messages_cpp/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_generate_messages_cpp.dir/build.make haha/CMakeFiles/haha_generate_messages_cpp.dir/build
-.PHONY : haha_generate_messages_cpp/fast
+pub_external/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pub_external.dir/build.make haha/CMakeFiles/pub_external.dir/build
+.PHONY : pub_external/fast
+
+# Convenience name for target.
+haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
+.PHONY : haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+haha_generate_messages_nodejs: haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
+
+.PHONY : haha_generate_messages_nodejs
+
+# fast build rule for target.
+haha_generate_messages_nodejs/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_generate_messages_nodejs.dir/build.make haha/CMakeFiles/haha_generate_messages_nodejs.dir/build
+.PHONY : haha_generate_messages_nodejs/fast
 
 # Convenience name for target.
 haha/CMakeFiles/uuid_msgs_generate_messages_lisp.dir/rule:
@@ -468,21 +453,6 @@ haha_genlisp/fast:
 .PHONY : haha_genlisp/fast
 
 # Convenience name for target.
-haha/CMakeFiles/ir_processing.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/ir_processing.dir/rule
-.PHONY : haha/CMakeFiles/ir_processing.dir/rule
-
-# Convenience name for target.
-ir_processing: haha/CMakeFiles/ir_processing.dir/rule
-
-.PHONY : ir_processing
-
-# fast build rule for target.
-ir_processing/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/ir_processing.dir/build.make haha/CMakeFiles/ir_processing.dir/build
-.PHONY : ir_processing/fast
-
-# Convenience name for target.
 haha/CMakeFiles/image_front.dir/rule:
 	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/image_front.dir/rule
 .PHONY : haha/CMakeFiles/image_front.dir/rule
@@ -511,36 +481,6 @@ haha_gencpp: haha/CMakeFiles/haha_gencpp.dir/rule
 haha_gencpp/fast:
 	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_gencpp.dir/build.make haha/CMakeFiles/haha_gencpp.dir/build
 .PHONY : haha_gencpp/fast
-
-# Convenience name for target.
-haha/CMakeFiles/haha_geneus.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_geneus.dir/rule
-.PHONY : haha/CMakeFiles/haha_geneus.dir/rule
-
-# Convenience name for target.
-haha_geneus: haha/CMakeFiles/haha_geneus.dir/rule
-
-.PHONY : haha_geneus
-
-# fast build rule for target.
-haha_geneus/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_geneus.dir/build.make haha/CMakeFiles/haha_geneus.dir/build
-.PHONY : haha_geneus/fast
-
-# Convenience name for target.
-haha/CMakeFiles/pixhawk_pub.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/pixhawk_pub.dir/rule
-.PHONY : haha/CMakeFiles/pixhawk_pub.dir/rule
-
-# Convenience name for target.
-pixhawk_pub: haha/CMakeFiles/pixhawk_pub.dir/rule
-
-.PHONY : pixhawk_pub
-
-# fast build rule for target.
-pixhawk_pub/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_pub.dir/build.make haha/CMakeFiles/pixhawk_pub.dir/build
-.PHONY : pixhawk_pub/fast
 
 # Convenience name for target.
 haha/CMakeFiles/image_infrared.dir/rule:
@@ -573,34 +513,19 @@ haha_generate_messages_eus/fast:
 .PHONY : haha_generate_messages_eus/fast
 
 # Convenience name for target.
-haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
-.PHONY : haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+haha/CMakeFiles/haha_geneus.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_geneus.dir/rule
+.PHONY : haha/CMakeFiles/haha_geneus.dir/rule
 
 # Convenience name for target.
-mavros_msgs_generate_messages_eus: haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/rule
+haha_geneus: haha/CMakeFiles/haha_geneus.dir/rule
 
-.PHONY : mavros_msgs_generate_messages_eus
+.PHONY : haha_geneus
 
 # fast build rule for target.
-mavros_msgs_generate_messages_eus/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
-.PHONY : mavros_msgs_generate_messages_eus/fast
-
-# Convenience name for target.
-haha/CMakeFiles/lidar_pub.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/lidar_pub.dir/rule
-.PHONY : haha/CMakeFiles/lidar_pub.dir/rule
-
-# Convenience name for target.
-lidar_pub: haha/CMakeFiles/lidar_pub.dir/rule
-
-.PHONY : lidar_pub
-
-# fast build rule for target.
-lidar_pub/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_pub.dir/build.make haha/CMakeFiles/lidar_pub.dir/build
-.PHONY : lidar_pub/fast
+haha_geneus/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_geneus.dir/build.make haha/CMakeFiles/haha_geneus.dir/build
+.PHONY : haha_geneus/fast
 
 # Convenience name for target.
 haha/CMakeFiles/mavros_msgs_generate_messages_nodejs.dir/rule:
@@ -648,334 +573,157 @@ haha_genpy/fast:
 .PHONY : haha_genpy/fast
 
 # Convenience name for target.
-haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
-.PHONY : haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
+haha/CMakeFiles/haha_generate_messages_cpp.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
+.PHONY : haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-haha_generate_messages_nodejs: haha/CMakeFiles/haha_generate_messages_nodejs.dir/rule
+haha_generate_messages_cpp: haha/CMakeFiles/haha_generate_messages_cpp.dir/rule
 
-.PHONY : haha_generate_messages_nodejs
+.PHONY : haha_generate_messages_cpp
 
 # fast build rule for target.
-haha_generate_messages_nodejs/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_generate_messages_nodejs.dir/build.make haha/CMakeFiles/haha_generate_messages_nodejs.dir/build
-.PHONY : haha_generate_messages_nodejs/fast
+haha_generate_messages_cpp/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/haha_generate_messages_cpp.dir/build.make haha/CMakeFiles/haha_generate_messages_cpp.dir/build
+.PHONY : haha_generate_messages_cpp/fast
 
 # Convenience name for target.
-haha/CMakeFiles/rgb_processing.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/rgb_processing.dir/rule
-.PHONY : haha/CMakeFiles/rgb_processing.dir/rule
+haha/CMakeFiles/display_sensor.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/display_sensor.dir/rule
+.PHONY : haha/CMakeFiles/display_sensor.dir/rule
 
 # Convenience name for target.
-rgb_processing: haha/CMakeFiles/rgb_processing.dir/rule
+display_sensor: haha/CMakeFiles/display_sensor.dir/rule
 
-.PHONY : rgb_processing
+.PHONY : display_sensor
 
 # fast build rule for target.
-rgb_processing/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/rgb_processing.dir/build.make haha/CMakeFiles/rgb_processing.dir/build
-.PHONY : rgb_processing/fast
+display_sensor/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/display_sensor.dir/build.make haha/CMakeFiles/display_sensor.dir/build
+.PHONY : display_sensor/fast
 
 # Convenience name for target.
-haha/CMakeFiles/lidar_record.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/lidar_record.dir/rule
-.PHONY : haha/CMakeFiles/lidar_record.dir/rule
+haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
+.PHONY : haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-lidar_record: haha/CMakeFiles/lidar_record.dir/rule
+geographic_msgs_generate_messages_nodejs: haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : lidar_record
+.PHONY : geographic_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-lidar_record/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_record.dir/build.make haha/CMakeFiles/lidar_record.dir/build
-.PHONY : lidar_record/fast
+geographic_msgs_generate_messages_nodejs/fast:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+.PHONY : geographic_msgs_generate_messages_nodejs/fast
 
-# Convenience name for target.
-haha/CMakeFiles/camera_pub.dir/rule:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f CMakeFiles/Makefile2 haha/CMakeFiles/camera_pub.dir/rule
-.PHONY : haha/CMakeFiles/camera_pub.dir/rule
+src/display_sensor.o: src/display_sensor.cpp.o
 
-# Convenience name for target.
-camera_pub: haha/CMakeFiles/camera_pub.dir/rule
-
-.PHONY : camera_pub
-
-# fast build rule for target.
-camera_pub/fast:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_pub.dir/build.make haha/CMakeFiles/camera_pub.dir/build
-.PHONY : camera_pub/fast
-
-src/first_jetson/image_front.o: src/first_jetson/image_front.cpp.o
-
-.PHONY : src/first_jetson/image_front.o
+.PHONY : src/display_sensor.o
 
 # target to build an object file
-src/first_jetson/image_front.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.o
-.PHONY : src/first_jetson/image_front.cpp.o
+src/display_sensor.cpp.o:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/display_sensor.dir/build.make haha/CMakeFiles/display_sensor.dir/src/display_sensor.cpp.o
+.PHONY : src/display_sensor.cpp.o
 
-src/first_jetson/image_front.i: src/first_jetson/image_front.cpp.i
+src/display_sensor.i: src/display_sensor.cpp.i
 
-.PHONY : src/first_jetson/image_front.i
+.PHONY : src/display_sensor.i
 
 # target to preprocess a source file
-src/first_jetson/image_front.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.i
-.PHONY : src/first_jetson/image_front.cpp.i
+src/display_sensor.cpp.i:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/display_sensor.dir/build.make haha/CMakeFiles/display_sensor.dir/src/display_sensor.cpp.i
+.PHONY : src/display_sensor.cpp.i
 
-src/first_jetson/image_front.s: src/first_jetson/image_front.cpp.s
+src/display_sensor.s: src/display_sensor.cpp.s
 
-.PHONY : src/first_jetson/image_front.s
+.PHONY : src/display_sensor.s
 
 # target to generate assembly for a file
-src/first_jetson/image_front.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/first_jetson/image_front.cpp.s
-.PHONY : src/first_jetson/image_front.cpp.s
+src/display_sensor.cpp.s:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/display_sensor.dir/build.make haha/CMakeFiles/display_sensor.dir/src/display_sensor.cpp.s
+.PHONY : src/display_sensor.cpp.s
 
-src/first_jetson/image_infrared.o: src/first_jetson/image_infrared.cpp.o
+src/image_front.o: src/image_front.cpp.o
 
-.PHONY : src/first_jetson/image_infrared.o
+.PHONY : src/image_front.o
 
 # target to build an object file
-src/first_jetson/image_infrared.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o
-.PHONY : src/first_jetson/image_infrared.cpp.o
+src/image_front.cpp.o:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/image_front.cpp.o
+.PHONY : src/image_front.cpp.o
 
-src/first_jetson/image_infrared.i: src/first_jetson/image_infrared.cpp.i
+src/image_front.i: src/image_front.cpp.i
 
-.PHONY : src/first_jetson/image_infrared.i
+.PHONY : src/image_front.i
 
 # target to preprocess a source file
-src/first_jetson/image_infrared.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.i
-.PHONY : src/first_jetson/image_infrared.cpp.i
+src/image_front.cpp.i:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/image_front.cpp.i
+.PHONY : src/image_front.cpp.i
 
-src/first_jetson/image_infrared.s: src/first_jetson/image_infrared.cpp.s
+src/image_front.s: src/image_front.cpp.s
 
-.PHONY : src/first_jetson/image_infrared.s
+.PHONY : src/image_front.s
 
 # target to generate assembly for a file
-src/first_jetson/image_infrared.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.s
-.PHONY : src/first_jetson/image_infrared.cpp.s
+src/image_front.cpp.s:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_front.dir/build.make haha/CMakeFiles/image_front.dir/src/image_front.cpp.s
+.PHONY : src/image_front.cpp.s
 
-src/first_jetson/ir_processing.o: src/first_jetson/ir_processing.cpp.o
+src/image_infrared.o: src/image_infrared.cpp.o
 
-.PHONY : src/first_jetson/ir_processing.o
+.PHONY : src/image_infrared.o
 
 # target to build an object file
-src/first_jetson/ir_processing.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/ir_processing.dir/build.make haha/CMakeFiles/ir_processing.dir/src/first_jetson/ir_processing.cpp.o
-.PHONY : src/first_jetson/ir_processing.cpp.o
+src/image_infrared.cpp.o:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o
+.PHONY : src/image_infrared.cpp.o
 
-src/first_jetson/ir_processing.i: src/first_jetson/ir_processing.cpp.i
+src/image_infrared.i: src/image_infrared.cpp.i
 
-.PHONY : src/first_jetson/ir_processing.i
+.PHONY : src/image_infrared.i
 
 # target to preprocess a source file
-src/first_jetson/ir_processing.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/ir_processing.dir/build.make haha/CMakeFiles/ir_processing.dir/src/first_jetson/ir_processing.cpp.i
-.PHONY : src/first_jetson/ir_processing.cpp.i
+src/image_infrared.cpp.i:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.i
+.PHONY : src/image_infrared.cpp.i
 
-src/first_jetson/ir_processing.s: src/first_jetson/ir_processing.cpp.s
+src/image_infrared.s: src/image_infrared.cpp.s
 
-.PHONY : src/first_jetson/ir_processing.s
+.PHONY : src/image_infrared.s
 
 # target to generate assembly for a file
-src/first_jetson/ir_processing.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/ir_processing.dir/build.make haha/CMakeFiles/ir_processing.dir/src/first_jetson/ir_processing.cpp.s
-.PHONY : src/first_jetson/ir_processing.cpp.s
+src/image_infrared.cpp.s:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.s
+.PHONY : src/image_infrared.cpp.s
 
-src/first_jetson/rgb_processing.o: src/first_jetson/rgb_processing.cpp.o
+src/pub_external.o: src/pub_external.cpp.o
 
-.PHONY : src/first_jetson/rgb_processing.o
+.PHONY : src/pub_external.o
 
 # target to build an object file
-src/first_jetson/rgb_processing.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/rgb_processing.dir/build.make haha/CMakeFiles/rgb_processing.dir/src/first_jetson/rgb_processing.cpp.o
-.PHONY : src/first_jetson/rgb_processing.cpp.o
+src/pub_external.cpp.o:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pub_external.dir/build.make haha/CMakeFiles/pub_external.dir/src/pub_external.cpp.o
+.PHONY : src/pub_external.cpp.o
 
-src/first_jetson/rgb_processing.i: src/first_jetson/rgb_processing.cpp.i
+src/pub_external.i: src/pub_external.cpp.i
 
-.PHONY : src/first_jetson/rgb_processing.i
-
-# target to preprocess a source file
-src/first_jetson/rgb_processing.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/rgb_processing.dir/build.make haha/CMakeFiles/rgb_processing.dir/src/first_jetson/rgb_processing.cpp.i
-.PHONY : src/first_jetson/rgb_processing.cpp.i
-
-src/first_jetson/rgb_processing.s: src/first_jetson/rgb_processing.cpp.s
-
-.PHONY : src/first_jetson/rgb_processing.s
-
-# target to generate assembly for a file
-src/first_jetson/rgb_processing.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/rgb_processing.dir/build.make haha/CMakeFiles/rgb_processing.dir/src/first_jetson/rgb_processing.cpp.s
-.PHONY : src/first_jetson/rgb_processing.cpp.s
-
-src/main_jetson/camera_pub.o: src/main_jetson/camera_pub.cpp.o
-
-.PHONY : src/main_jetson/camera_pub.o
-
-# target to build an object file
-src/main_jetson/camera_pub.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_pub.dir/build.make haha/CMakeFiles/camera_pub.dir/src/main_jetson/camera_pub.cpp.o
-.PHONY : src/main_jetson/camera_pub.cpp.o
-
-src/main_jetson/camera_pub.i: src/main_jetson/camera_pub.cpp.i
-
-.PHONY : src/main_jetson/camera_pub.i
+.PHONY : src/pub_external.i
 
 # target to preprocess a source file
-src/main_jetson/camera_pub.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_pub.dir/build.make haha/CMakeFiles/camera_pub.dir/src/main_jetson/camera_pub.cpp.i
-.PHONY : src/main_jetson/camera_pub.cpp.i
+src/pub_external.cpp.i:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pub_external.dir/build.make haha/CMakeFiles/pub_external.dir/src/pub_external.cpp.i
+.PHONY : src/pub_external.cpp.i
 
-src/main_jetson/camera_pub.s: src/main_jetson/camera_pub.cpp.s
+src/pub_external.s: src/pub_external.cpp.s
 
-.PHONY : src/main_jetson/camera_pub.s
-
-# target to generate assembly for a file
-src/main_jetson/camera_pub.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_pub.dir/build.make haha/CMakeFiles/camera_pub.dir/src/main_jetson/camera_pub.cpp.s
-.PHONY : src/main_jetson/camera_pub.cpp.s
-
-src/main_jetson/camera_record.o: src/main_jetson/camera_record.cpp.o
-
-.PHONY : src/main_jetson/camera_record.o
-
-# target to build an object file
-src/main_jetson/camera_record.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_record.dir/build.make haha/CMakeFiles/camera_record.dir/src/main_jetson/camera_record.cpp.o
-.PHONY : src/main_jetson/camera_record.cpp.o
-
-src/main_jetson/camera_record.i: src/main_jetson/camera_record.cpp.i
-
-.PHONY : src/main_jetson/camera_record.i
-
-# target to preprocess a source file
-src/main_jetson/camera_record.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_record.dir/build.make haha/CMakeFiles/camera_record.dir/src/main_jetson/camera_record.cpp.i
-.PHONY : src/main_jetson/camera_record.cpp.i
-
-src/main_jetson/camera_record.s: src/main_jetson/camera_record.cpp.s
-
-.PHONY : src/main_jetson/camera_record.s
+.PHONY : src/pub_external.s
 
 # target to generate assembly for a file
-src/main_jetson/camera_record.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/camera_record.dir/build.make haha/CMakeFiles/camera_record.dir/src/main_jetson/camera_record.cpp.s
-.PHONY : src/main_jetson/camera_record.cpp.s
-
-src/main_jetson/lidar_pub.o: src/main_jetson/lidar_pub.cpp.o
-
-.PHONY : src/main_jetson/lidar_pub.o
-
-# target to build an object file
-src/main_jetson/lidar_pub.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_pub.dir/build.make haha/CMakeFiles/lidar_pub.dir/src/main_jetson/lidar_pub.cpp.o
-.PHONY : src/main_jetson/lidar_pub.cpp.o
-
-src/main_jetson/lidar_pub.i: src/main_jetson/lidar_pub.cpp.i
-
-.PHONY : src/main_jetson/lidar_pub.i
-
-# target to preprocess a source file
-src/main_jetson/lidar_pub.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_pub.dir/build.make haha/CMakeFiles/lidar_pub.dir/src/main_jetson/lidar_pub.cpp.i
-.PHONY : src/main_jetson/lidar_pub.cpp.i
-
-src/main_jetson/lidar_pub.s: src/main_jetson/lidar_pub.cpp.s
-
-.PHONY : src/main_jetson/lidar_pub.s
-
-# target to generate assembly for a file
-src/main_jetson/lidar_pub.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_pub.dir/build.make haha/CMakeFiles/lidar_pub.dir/src/main_jetson/lidar_pub.cpp.s
-.PHONY : src/main_jetson/lidar_pub.cpp.s
-
-src/main_jetson/lidar_record.o: src/main_jetson/lidar_record.cpp.o
-
-.PHONY : src/main_jetson/lidar_record.o
-
-# target to build an object file
-src/main_jetson/lidar_record.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_record.dir/build.make haha/CMakeFiles/lidar_record.dir/src/main_jetson/lidar_record.cpp.o
-.PHONY : src/main_jetson/lidar_record.cpp.o
-
-src/main_jetson/lidar_record.i: src/main_jetson/lidar_record.cpp.i
-
-.PHONY : src/main_jetson/lidar_record.i
-
-# target to preprocess a source file
-src/main_jetson/lidar_record.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_record.dir/build.make haha/CMakeFiles/lidar_record.dir/src/main_jetson/lidar_record.cpp.i
-.PHONY : src/main_jetson/lidar_record.cpp.i
-
-src/main_jetson/lidar_record.s: src/main_jetson/lidar_record.cpp.s
-
-.PHONY : src/main_jetson/lidar_record.s
-
-# target to generate assembly for a file
-src/main_jetson/lidar_record.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/lidar_record.dir/build.make haha/CMakeFiles/lidar_record.dir/src/main_jetson/lidar_record.cpp.s
-.PHONY : src/main_jetson/lidar_record.cpp.s
-
-src/main_jetson/pixhawk_pub.o: src/main_jetson/pixhawk_pub.cpp.o
-
-.PHONY : src/main_jetson/pixhawk_pub.o
-
-# target to build an object file
-src/main_jetson/pixhawk_pub.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_pub.dir/build.make haha/CMakeFiles/pixhawk_pub.dir/src/main_jetson/pixhawk_pub.cpp.o
-.PHONY : src/main_jetson/pixhawk_pub.cpp.o
-
-src/main_jetson/pixhawk_pub.i: src/main_jetson/pixhawk_pub.cpp.i
-
-.PHONY : src/main_jetson/pixhawk_pub.i
-
-# target to preprocess a source file
-src/main_jetson/pixhawk_pub.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_pub.dir/build.make haha/CMakeFiles/pixhawk_pub.dir/src/main_jetson/pixhawk_pub.cpp.i
-.PHONY : src/main_jetson/pixhawk_pub.cpp.i
-
-src/main_jetson/pixhawk_pub.s: src/main_jetson/pixhawk_pub.cpp.s
-
-.PHONY : src/main_jetson/pixhawk_pub.s
-
-# target to generate assembly for a file
-src/main_jetson/pixhawk_pub.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_pub.dir/build.make haha/CMakeFiles/pixhawk_pub.dir/src/main_jetson/pixhawk_pub.cpp.s
-.PHONY : src/main_jetson/pixhawk_pub.cpp.s
-
-src/main_jetson/pixhawk_record.o: src/main_jetson/pixhawk_record.cpp.o
-
-.PHONY : src/main_jetson/pixhawk_record.o
-
-# target to build an object file
-src/main_jetson/pixhawk_record.cpp.o:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_record.dir/build.make haha/CMakeFiles/pixhawk_record.dir/src/main_jetson/pixhawk_record.cpp.o
-.PHONY : src/main_jetson/pixhawk_record.cpp.o
-
-src/main_jetson/pixhawk_record.i: src/main_jetson/pixhawk_record.cpp.i
-
-.PHONY : src/main_jetson/pixhawk_record.i
-
-# target to preprocess a source file
-src/main_jetson/pixhawk_record.cpp.i:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_record.dir/build.make haha/CMakeFiles/pixhawk_record.dir/src/main_jetson/pixhawk_record.cpp.i
-.PHONY : src/main_jetson/pixhawk_record.cpp.i
-
-src/main_jetson/pixhawk_record.s: src/main_jetson/pixhawk_record.cpp.s
-
-.PHONY : src/main_jetson/pixhawk_record.s
-
-# target to generate assembly for a file
-src/main_jetson/pixhawk_record.cpp.s:
-	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pixhawk_record.dir/build.make haha/CMakeFiles/pixhawk_record.dir/src/main_jetson/pixhawk_record.cpp.s
-.PHONY : src/main_jetson/pixhawk_record.cpp.s
+src/pub_external.cpp.s:
+	cd /home/mfikih15/obslam_vehicle/build && $(MAKE) -f haha/CMakeFiles/pub_external.dir/build.make haha/CMakeFiles/pub_external.dir/src/pub_external.cpp.s
+.PHONY : src/pub_external.cpp.s
 
 # Help Target
 help:
@@ -983,79 +731,55 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... install/local"
-	@echo "... install"
-	@echo "... list_install_components"
-	@echo "... rebuild_cache"
 	@echo "... haha_generate_messages"
+	@echo "... rebuild_cache"
 	@echo "... uuid_msgs_generate_messages_nodejs"
 	@echo "... haha_generate_messages_lisp"
 	@echo "... uuid_msgs_generate_messages_cpp"
 	@echo "... uuid_msgs_generate_messages_py"
 	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... geographic_msgs_generate_messages_lisp"
-	@echo "... camera_record"
 	@echo "... geographic_msgs_generate_messages_eus"
 	@echo "... geographic_msgs_generate_messages_py"
 	@echo "... uuid_msgs_generate_messages_eus"
+	@echo "... mavros_msgs_generate_messages_eus"
+	@echo "... install/local"
 	@echo "... mavros_msgs_generate_messages_cpp"
 	@echo "... haha_generate_messages_py"
 	@echo "... geographic_msgs_generate_messages_cpp"
-	@echo "... test"
-	@echo "... geographic_msgs_generate_messages_nodejs"
-	@echo "... pixhawk_record"
 	@echo "... mavros_msgs_generate_messages_py"
-	@echo "... haha_generate_messages_cpp"
+	@echo "... pub_external"
+	@echo "... haha_generate_messages_nodejs"
 	@echo "... uuid_msgs_generate_messages_lisp"
 	@echo "... haha_genlisp"
-	@echo "... ir_processing"
 	@echo "... image_front"
 	@echo "... install/strip"
 	@echo "... haha_gencpp"
-	@echo "... edit_cache"
-	@echo "... haha_geneus"
-	@echo "... pixhawk_pub"
 	@echo "... image_infrared"
 	@echo "... haha_generate_messages_eus"
-	@echo "... mavros_msgs_generate_messages_eus"
-	@echo "... lidar_pub"
+	@echo "... haha_geneus"
+	@echo "... edit_cache"
 	@echo "... mavros_msgs_generate_messages_nodejs"
 	@echo "... haha_gennodejs"
 	@echo "... haha_genpy"
-	@echo "... haha_generate_messages_nodejs"
-	@echo "... rgb_processing"
-	@echo "... lidar_record"
-	@echo "... camera_pub"
-	@echo "... src/first_jetson/image_front.o"
-	@echo "... src/first_jetson/image_front.i"
-	@echo "... src/first_jetson/image_front.s"
-	@echo "... src/first_jetson/image_infrared.o"
-	@echo "... src/first_jetson/image_infrared.i"
-	@echo "... src/first_jetson/image_infrared.s"
-	@echo "... src/first_jetson/ir_processing.o"
-	@echo "... src/first_jetson/ir_processing.i"
-	@echo "... src/first_jetson/ir_processing.s"
-	@echo "... src/first_jetson/rgb_processing.o"
-	@echo "... src/first_jetson/rgb_processing.i"
-	@echo "... src/first_jetson/rgb_processing.s"
-	@echo "... src/main_jetson/camera_pub.o"
-	@echo "... src/main_jetson/camera_pub.i"
-	@echo "... src/main_jetson/camera_pub.s"
-	@echo "... src/main_jetson/camera_record.o"
-	@echo "... src/main_jetson/camera_record.i"
-	@echo "... src/main_jetson/camera_record.s"
-	@echo "... src/main_jetson/lidar_pub.o"
-	@echo "... src/main_jetson/lidar_pub.i"
-	@echo "... src/main_jetson/lidar_pub.s"
-	@echo "... src/main_jetson/lidar_record.o"
-	@echo "... src/main_jetson/lidar_record.i"
-	@echo "... src/main_jetson/lidar_record.s"
-	@echo "... src/main_jetson/pixhawk_pub.o"
-	@echo "... src/main_jetson/pixhawk_pub.i"
-	@echo "... src/main_jetson/pixhawk_pub.s"
-	@echo "... src/main_jetson/pixhawk_record.o"
-	@echo "... src/main_jetson/pixhawk_record.i"
-	@echo "... src/main_jetson/pixhawk_record.s"
+	@echo "... haha_generate_messages_cpp"
+	@echo "... display_sensor"
+	@echo "... geographic_msgs_generate_messages_nodejs"
+	@echo "... test"
+	@echo "... list_install_components"
+	@echo "... install"
+	@echo "... src/display_sensor.o"
+	@echo "... src/display_sensor.i"
+	@echo "... src/display_sensor.s"
+	@echo "... src/image_front.o"
+	@echo "... src/image_front.i"
+	@echo "... src/image_front.s"
+	@echo "... src/image_infrared.o"
+	@echo "... src/image_infrared.i"
+	@echo "... src/image_infrared.s"
+	@echo "... src/pub_external.o"
+	@echo "... src/pub_external.i"
+	@echo "... src/pub_external.s"
 .PHONY : help
 
 

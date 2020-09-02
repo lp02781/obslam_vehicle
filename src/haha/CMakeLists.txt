@@ -160,62 +160,26 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
-add_executable(image_front src/first_jetson/image_front.cpp )
+add_executable(image_front src/image_front.cpp )
 target_link_libraries(image_front
 ${catkin_LIBRARIES}
 ${OpenCV_LIBRARIES}
 )
 
-add_executable(image_infrared src/first_jetson/image_infrared.cpp )
+add_executable(image_infrared src/image_infrared.cpp )
 target_link_libraries(image_infrared
 ${catkin_LIBRARIES}
 ${OpenCV_LIBRARIES}
 )
 
-add_executable(rgb_processing src/first_jetson/rgb_processing.cpp )
-target_link_libraries(rgb_processing
+add_executable(display_sensor src/display_sensor.cpp )
+target_link_libraries(display_sensor
 ${catkin_LIBRARIES}
 ${OpenCV_LIBRARIES}
 )
 
-add_executable(ir_processing src/first_jetson/ir_processing.cpp )
-target_link_libraries(ir_processing
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(pixhawk_record src/main_jetson/pixhawk_record.cpp )
-target_link_libraries(pixhawk_record
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(camera_record src/main_jetson/camera_record.cpp )
-target_link_libraries(camera_record
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(lidar_record src/main_jetson/lidar_record.cpp )
-target_link_libraries(lidar_record
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(pixhawk_pub src/main_jetson/pixhawk_pub.cpp )
-target_link_libraries(pixhawk_pub
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(camera_pub src/main_jetson/camera_pub.cpp )
-target_link_libraries(camera_pub
-${catkin_LIBRARIES}
-${OpenCV_LIBRARIES}
-)
-
-add_executable(lidar_pub src/main_jetson/lidar_pub.cpp )
-target_link_libraries(lidar_pub
+add_executable(pub_external src/pub_external.cpp )
+target_link_libraries(pub_external
 ${catkin_LIBRARIES}
 ${OpenCV_LIBRARIES}
 )

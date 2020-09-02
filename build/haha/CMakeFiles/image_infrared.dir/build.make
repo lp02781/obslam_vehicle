@@ -57,38 +57,38 @@ include haha/CMakeFiles/image_infrared.dir/progress.make
 # Include the compile flags for this target's objects.
 include haha/CMakeFiles/image_infrared.dir/flags.make
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o: haha/CMakeFiles/image_infrared.dir/flags.make
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o: /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_infrared.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfikih15/obslam_vehicle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o -c /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_infrared.cpp
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o: haha/CMakeFiles/image_infrared.dir/flags.make
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o: /home/mfikih15/obslam_vehicle/src/haha/src/image_infrared.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/mfikih15/obslam_vehicle/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o -c /home/mfikih15/obslam_vehicle/src/haha/src/image_infrared.cpp
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.i"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_infrared.cpp > CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.i
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/image_infrared.dir/src/image_infrared.cpp.i"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/mfikih15/obslam_vehicle/src/haha/src/image_infrared.cpp > CMakeFiles/image_infrared.dir/src/image_infrared.cpp.i
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.s"
-	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfikih15/obslam_vehicle/src/haha/src/first_jetson/image_infrared.cpp -o CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.s
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/image_infrared.dir/src/image_infrared.cpp.s"
+	cd /home/mfikih15/obslam_vehicle/build/haha && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/mfikih15/obslam_vehicle/src/haha/src/image_infrared.cpp -o CMakeFiles/image_infrared.dir/src/image_infrared.cpp.s
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.requires:
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.requires:
 
-.PHONY : haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.requires
+.PHONY : haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.requires
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.provides: haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.requires
-	$(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.provides.build
-.PHONY : haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.provides
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.provides: haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.requires
+	$(MAKE) -f haha/CMakeFiles/image_infrared.dir/build.make haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.provides.build
+.PHONY : haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.provides
 
-haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.provides.build: haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o
+haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.provides.build: haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o
 
 
 # Object files for target image_infrared
 image_infrared_OBJECTS = \
-"CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o"
+"CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o"
 
 # External object files for target image_infrared
 image_infrared_EXTERNAL_OBJECTS =
 
-/home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared: haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o
+/home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared: haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared: haha/CMakeFiles/image_infrared.dir/build.make
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared: /opt/ros/melodic/lib/libcv_bridge.so
 /home/mfikih15/obslam_vehicle/devel/lib/haha/image_infrared: /usr/lib/x86_64-linux-gnu/libopencv_core.so.3.2.0
@@ -174,7 +174,7 @@ haha/CMakeFiles/image_infrared.dir/build: /home/mfikih15/obslam_vehicle/devel/li
 
 .PHONY : haha/CMakeFiles/image_infrared.dir/build
 
-haha/CMakeFiles/image_infrared.dir/requires: haha/CMakeFiles/image_infrared.dir/src/first_jetson/image_infrared.cpp.o.requires
+haha/CMakeFiles/image_infrared.dir/requires: haha/CMakeFiles/image_infrared.dir/src/image_infrared.cpp.o.requires
 
 .PHONY : haha/CMakeFiles/image_infrared.dir/requires
 

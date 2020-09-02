@@ -1182,19 +1182,6 @@ geographic_msgs_generate_messages_lisp/fast:
 .PHONY : geographic_msgs_generate_messages_lisp/fast
 
 #=============================================================================
-# Target rules for targets named camera_record
-
-# Build rule for target.
-camera_record: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 camera_record
-.PHONY : camera_record
-
-# fast build rule for target.
-camera_record/fast:
-	$(MAKE) -f haha/CMakeFiles/camera_record.dir/build.make haha/CMakeFiles/camera_record.dir/build
-.PHONY : camera_record/fast
-
-#=============================================================================
 # Target rules for targets named geographic_msgs_generate_messages_eus
 
 # Build rule for target.
@@ -1232,6 +1219,19 @@ uuid_msgs_generate_messages_eus: cmake_check_build_system
 uuid_msgs_generate_messages_eus/fast:
 	$(MAKE) -f haha/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/uuid_msgs_generate_messages_eus.dir/build
 .PHONY : uuid_msgs_generate_messages_eus/fast
+
+#=============================================================================
+# Target rules for targets named mavros_msgs_generate_messages_eus
+
+# Build rule for target.
+mavros_msgs_generate_messages_eus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_eus
+.PHONY : mavros_msgs_generate_messages_eus
+
+# fast build rule for target.
+mavros_msgs_generate_messages_eus/fast:
+	$(MAKE) -f haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
+.PHONY : mavros_msgs_generate_messages_eus/fast
 
 #=============================================================================
 # Target rules for targets named mavros_msgs_generate_messages_cpp
@@ -1273,32 +1273,6 @@ geographic_msgs_generate_messages_cpp/fast:
 .PHONY : geographic_msgs_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named geographic_msgs_generate_messages_nodejs
-
-# Build rule for target.
-geographic_msgs_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_nodejs
-.PHONY : geographic_msgs_generate_messages_nodejs
-
-# fast build rule for target.
-geographic_msgs_generate_messages_nodejs/fast:
-	$(MAKE) -f haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
-.PHONY : geographic_msgs_generate_messages_nodejs/fast
-
-#=============================================================================
-# Target rules for targets named pixhawk_record
-
-# Build rule for target.
-pixhawk_record: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pixhawk_record
-.PHONY : pixhawk_record
-
-# fast build rule for target.
-pixhawk_record/fast:
-	$(MAKE) -f haha/CMakeFiles/pixhawk_record.dir/build.make haha/CMakeFiles/pixhawk_record.dir/build
-.PHONY : pixhawk_record/fast
-
-#=============================================================================
 # Target rules for targets named mavros_msgs_generate_messages_py
 
 # Build rule for target.
@@ -1312,17 +1286,30 @@ mavros_msgs_generate_messages_py/fast:
 .PHONY : mavros_msgs_generate_messages_py/fast
 
 #=============================================================================
-# Target rules for targets named haha_generate_messages_cpp
+# Target rules for targets named pub_external
 
 # Build rule for target.
-haha_generate_messages_cpp: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 haha_generate_messages_cpp
-.PHONY : haha_generate_messages_cpp
+pub_external: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 pub_external
+.PHONY : pub_external
 
 # fast build rule for target.
-haha_generate_messages_cpp/fast:
-	$(MAKE) -f haha/CMakeFiles/haha_generate_messages_cpp.dir/build.make haha/CMakeFiles/haha_generate_messages_cpp.dir/build
-.PHONY : haha_generate_messages_cpp/fast
+pub_external/fast:
+	$(MAKE) -f haha/CMakeFiles/pub_external.dir/build.make haha/CMakeFiles/pub_external.dir/build
+.PHONY : pub_external/fast
+
+#=============================================================================
+# Target rules for targets named haha_generate_messages_nodejs
+
+# Build rule for target.
+haha_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 haha_generate_messages_nodejs
+.PHONY : haha_generate_messages_nodejs
+
+# fast build rule for target.
+haha_generate_messages_nodejs/fast:
+	$(MAKE) -f haha/CMakeFiles/haha_generate_messages_nodejs.dir/build.make haha/CMakeFiles/haha_generate_messages_nodejs.dir/build
+.PHONY : haha_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named uuid_msgs_generate_messages_lisp
@@ -1351,19 +1338,6 @@ haha_genlisp/fast:
 .PHONY : haha_genlisp/fast
 
 #=============================================================================
-# Target rules for targets named ir_processing
-
-# Build rule for target.
-ir_processing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 ir_processing
-.PHONY : ir_processing
-
-# fast build rule for target.
-ir_processing/fast:
-	$(MAKE) -f haha/CMakeFiles/ir_processing.dir/build.make haha/CMakeFiles/ir_processing.dir/build
-.PHONY : ir_processing/fast
-
-#=============================================================================
 # Target rules for targets named image_front
 
 # Build rule for target.
@@ -1388,32 +1362,6 @@ haha_gencpp: cmake_check_build_system
 haha_gencpp/fast:
 	$(MAKE) -f haha/CMakeFiles/haha_gencpp.dir/build.make haha/CMakeFiles/haha_gencpp.dir/build
 .PHONY : haha_gencpp/fast
-
-#=============================================================================
-# Target rules for targets named haha_geneus
-
-# Build rule for target.
-haha_geneus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 haha_geneus
-.PHONY : haha_geneus
-
-# fast build rule for target.
-haha_geneus/fast:
-	$(MAKE) -f haha/CMakeFiles/haha_geneus.dir/build.make haha/CMakeFiles/haha_geneus.dir/build
-.PHONY : haha_geneus/fast
-
-#=============================================================================
-# Target rules for targets named pixhawk_pub
-
-# Build rule for target.
-pixhawk_pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 pixhawk_pub
-.PHONY : pixhawk_pub
-
-# fast build rule for target.
-pixhawk_pub/fast:
-	$(MAKE) -f haha/CMakeFiles/pixhawk_pub.dir/build.make haha/CMakeFiles/pixhawk_pub.dir/build
-.PHONY : pixhawk_pub/fast
 
 #=============================================================================
 # Target rules for targets named image_infrared
@@ -1442,30 +1390,17 @@ haha_generate_messages_eus/fast:
 .PHONY : haha_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named mavros_msgs_generate_messages_eus
+# Target rules for targets named haha_geneus
 
 # Build rule for target.
-mavros_msgs_generate_messages_eus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 mavros_msgs_generate_messages_eus
-.PHONY : mavros_msgs_generate_messages_eus
+haha_geneus: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 haha_geneus
+.PHONY : haha_geneus
 
 # fast build rule for target.
-mavros_msgs_generate_messages_eus/fast:
-	$(MAKE) -f haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build.make haha/CMakeFiles/mavros_msgs_generate_messages_eus.dir/build
-.PHONY : mavros_msgs_generate_messages_eus/fast
-
-#=============================================================================
-# Target rules for targets named lidar_pub
-
-# Build rule for target.
-lidar_pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lidar_pub
-.PHONY : lidar_pub
-
-# fast build rule for target.
-lidar_pub/fast:
-	$(MAKE) -f haha/CMakeFiles/lidar_pub.dir/build.make haha/CMakeFiles/lidar_pub.dir/build
-.PHONY : lidar_pub/fast
+haha_geneus/fast:
+	$(MAKE) -f haha/CMakeFiles/haha_geneus.dir/build.make haha/CMakeFiles/haha_geneus.dir/build
+.PHONY : haha_geneus/fast
 
 #=============================================================================
 # Target rules for targets named mavros_msgs_generate_messages_nodejs
@@ -1507,56 +1442,43 @@ haha_genpy/fast:
 .PHONY : haha_genpy/fast
 
 #=============================================================================
-# Target rules for targets named haha_generate_messages_nodejs
+# Target rules for targets named haha_generate_messages_cpp
 
 # Build rule for target.
-haha_generate_messages_nodejs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 haha_generate_messages_nodejs
-.PHONY : haha_generate_messages_nodejs
+haha_generate_messages_cpp: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 haha_generate_messages_cpp
+.PHONY : haha_generate_messages_cpp
 
 # fast build rule for target.
-haha_generate_messages_nodejs/fast:
-	$(MAKE) -f haha/CMakeFiles/haha_generate_messages_nodejs.dir/build.make haha/CMakeFiles/haha_generate_messages_nodejs.dir/build
-.PHONY : haha_generate_messages_nodejs/fast
+haha_generate_messages_cpp/fast:
+	$(MAKE) -f haha/CMakeFiles/haha_generate_messages_cpp.dir/build.make haha/CMakeFiles/haha_generate_messages_cpp.dir/build
+.PHONY : haha_generate_messages_cpp/fast
 
 #=============================================================================
-# Target rules for targets named rgb_processing
+# Target rules for targets named display_sensor
 
 # Build rule for target.
-rgb_processing: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 rgb_processing
-.PHONY : rgb_processing
+display_sensor: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 display_sensor
+.PHONY : display_sensor
 
 # fast build rule for target.
-rgb_processing/fast:
-	$(MAKE) -f haha/CMakeFiles/rgb_processing.dir/build.make haha/CMakeFiles/rgb_processing.dir/build
-.PHONY : rgb_processing/fast
+display_sensor/fast:
+	$(MAKE) -f haha/CMakeFiles/display_sensor.dir/build.make haha/CMakeFiles/display_sensor.dir/build
+.PHONY : display_sensor/fast
 
 #=============================================================================
-# Target rules for targets named lidar_record
+# Target rules for targets named geographic_msgs_generate_messages_nodejs
 
 # Build rule for target.
-lidar_record: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lidar_record
-.PHONY : lidar_record
+geographic_msgs_generate_messages_nodejs: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 geographic_msgs_generate_messages_nodejs
+.PHONY : geographic_msgs_generate_messages_nodejs
 
 # fast build rule for target.
-lidar_record/fast:
-	$(MAKE) -f haha/CMakeFiles/lidar_record.dir/build.make haha/CMakeFiles/lidar_record.dir/build
-.PHONY : lidar_record/fast
-
-#=============================================================================
-# Target rules for targets named camera_pub
-
-# Build rule for target.
-camera_pub: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 camera_pub
-.PHONY : camera_pub
-
-# fast build rule for target.
-camera_pub/fast:
-	$(MAKE) -f haha/CMakeFiles/camera_pub.dir/build.make haha/CMakeFiles/camera_pub.dir/build
-.PHONY : camera_pub/fast
+geographic_msgs_generate_messages_nodejs/fast:
+	$(MAKE) -f haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build.make haha/CMakeFiles/geographic_msgs_generate_messages_nodejs.dir/build
+.PHONY : geographic_msgs_generate_messages_nodejs/fast
 
 #=============================================================================
 # Target rules for targets named TCPclient
@@ -2325,35 +2247,29 @@ help:
 	@echo "... uuid_msgs_generate_messages_py"
 	@echo "... mavros_msgs_generate_messages_lisp"
 	@echo "... geographic_msgs_generate_messages_lisp"
-	@echo "... camera_record"
 	@echo "... geographic_msgs_generate_messages_eus"
 	@echo "... geographic_msgs_generate_messages_py"
 	@echo "... uuid_msgs_generate_messages_eus"
+	@echo "... mavros_msgs_generate_messages_eus"
 	@echo "... mavros_msgs_generate_messages_cpp"
 	@echo "... haha_generate_messages_py"
 	@echo "... geographic_msgs_generate_messages_cpp"
-	@echo "... geographic_msgs_generate_messages_nodejs"
-	@echo "... pixhawk_record"
 	@echo "... mavros_msgs_generate_messages_py"
-	@echo "... haha_generate_messages_cpp"
+	@echo "... pub_external"
+	@echo "... haha_generate_messages_nodejs"
 	@echo "... uuid_msgs_generate_messages_lisp"
 	@echo "... haha_genlisp"
-	@echo "... ir_processing"
 	@echo "... image_front"
 	@echo "... haha_gencpp"
-	@echo "... haha_geneus"
-	@echo "... pixhawk_pub"
 	@echo "... image_infrared"
 	@echo "... haha_generate_messages_eus"
-	@echo "... mavros_msgs_generate_messages_eus"
-	@echo "... lidar_pub"
+	@echo "... haha_geneus"
 	@echo "... mavros_msgs_generate_messages_nodejs"
 	@echo "... haha_gennodejs"
 	@echo "... haha_genpy"
-	@echo "... haha_generate_messages_nodejs"
-	@echo "... rgb_processing"
-	@echo "... lidar_record"
-	@echo "... camera_pub"
+	@echo "... haha_generate_messages_cpp"
+	@echo "... display_sensor"
+	@echo "... geographic_msgs_generate_messages_nodejs"
 	@echo "... TCPclient"
 	@echo "... hehe_gencpp"
 	@echo "... server"
